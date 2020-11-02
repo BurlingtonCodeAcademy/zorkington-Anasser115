@@ -49,6 +49,15 @@ async function start() {
   if (answer === 'on') {
     console.log('The sign says ' + torch['on']);
   }
+  let code = await ask("Type in the code")
+  
+  for (;code != 1234;){
+    console.log("Worng code!!");
+    code = await ask("Enter the code again");
+  }
+  if (code == 1234) {
+    console.log("Code accepted \nEntering the building now...");
+  }
   
 
 
